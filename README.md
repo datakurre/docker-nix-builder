@@ -9,5 +9,6 @@ Building a Docker image from Nix expression:
 
 Building a Docker image from Nix expression file:
 
-    $ cat default.nix | docker run --rm -i datakurre/nix-builder |\
+    $ cat default.nix |\
+          docker run --rm -i datakurre/nix-builder |\
           docker import --chane 'ENTRYPOINT ["/bin/python"]' - pyramid
